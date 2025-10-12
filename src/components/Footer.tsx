@@ -10,7 +10,7 @@ const Footer = () => {
                       <LuHouse className="text-[var(--primary-green500)] w-7 h-7"/>
                       <span className='px-1'><a href="#">Ramoni Estates</a></span>
                      </div>
-            <p className='py-4 w-full'>"Discover the art of refined living."</p>
+                <p className='py-4 w-full'>&#34; Discover the art of refined living. &#34;</p>
             
         </div>
 
