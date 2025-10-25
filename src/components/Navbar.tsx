@@ -1,4 +1,5 @@
 'use client'
+import Link from 'next/link'
 import React, { useState } from 'react'
 import { LuHouse } from 'react-icons/lu'
 import { FiSearch } from 'react-icons/fi'
@@ -20,9 +21,9 @@ export default function Navbar() {
         <div className="hidden sm:flex items-center gap-8">
           <a href="#" className="hover:text-[var(--primary-green500)]">About Us</a>
           <a href="#" className="hover:text-[var(--primary-green500)]">Services</a>
-           <a href="#" className="hover:text-[var(--primary-green500)]">Buy</a>
-          <a href="#" className="hover:text-[var(--primary-green500)]">Rent</a>
-          <a href="#" className="hover:text-[var(--primary-green500)]">Sell</a>
+           <Link href="/property" className="hover:text-[var(--primary-green500)]">Buy</Link>
+          <Link href="/property" className="hover:text-[var(--primary-green500)]">Rent</Link>
+          <Link href="/property" className="hover:text-[var(--primary-green500)]">Sell</Link>
         </div>
 
         {/* Right: hamburger (mobile) + Sign in */}
