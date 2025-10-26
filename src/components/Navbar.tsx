@@ -12,16 +12,17 @@ export default function Navbar() {
     <>
       {/* ========== HEADER (your original navbar) ========== */}
       <div className="flex justify-between items-center px-4 sm:px-12 lg:px-24 xl:px-40 py-4 sticky top-0 z-30 backdrop-blur-xl font-medium bg-white/50 border-b border-gray-100">
-        <div className='flex items-center font-semibold text-lg'>
-          <LuHouse className="text-[var(--primary-green500)] w-7 h-7"/>
-          <span className='px-1'><a href="#">Ramoni Estates</a></span>
-        </div>
+      <Link href="/" className="flex items-center font-semibold text-lg">
+        <LuHouse className="text-[var(--primary-green500)] w-7 h-7" />
+        <span className="px-1">Ramoni Estates</span>
+      </Link>
+
 
         {/* Desktop nav - keep this if you already have it */}
         <div className="hidden sm:flex items-center gap-8">
           <a href="#" className="hover:text-[var(--primary-green500)]">About Us</a>
-          <a href="#" className="hover:text-[var(--primary-green500)]">Services</a>
-           <Link href="/property" className="hover:text-[var(--primary-green500)]">Buy</Link>
+          <a href="#Services" className="hover:text-[var(--primary-green500)]">Services</a>
+          <Link href="/property" className="hover:text-[var(--primary-green500)]">Buy</Link>
           <Link href="/property" className="hover:text-[var(--primary-green500)]">Rent</Link>
           <Link href="/property" className="hover:text-[var(--primary-green500)]">Sell</Link>
         </div>
@@ -41,7 +42,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* ========== OVERLAY (sibling of header) ========== */}
+      {/* ========== OVERLAY (sibling of header) ========== */} 
       <div
         className={`fixed inset-0 bg-black/40 z-40 transition-opacity duration-300 sm:hidden
           ${sidebarOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
@@ -64,10 +65,10 @@ export default function Navbar() {
 
         <nav className="flex flex-col gap-6 pt-20 px-6">
           <a onClick={() => setSidebarOpen(false)} href="#" className="text-lg">About Us</a>
-          <a onClick={() => setSidebarOpen(false)} href="#" className="text-lg">Services</a>
-          <a onClick={() => setSidebarOpen(false)} href="#" className="text-lg">Buy</a>
-          <a onClick={() => setSidebarOpen(false)} href="#" className="text-lg">Rent</a>
-          <a onClick={() => setSidebarOpen(false)} href="#" className="text-lg">Sell</a>
+          <a onClick={() => setSidebarOpen(false)} href="#Services" className="text-lg">Services</a>
+          <Link onClick={() => setSidebarOpen(false)} href="/property" className="text-lg">Buy</Link>
+          <Link onClick={() => setSidebarOpen(false)} href="/property" className="text-lg">Rent</Link>
+          <Link onClick={() => setSidebarOpen(false)} href="/property" className="text-lg">Sell</Link>
 
           <a onClick={() => setSidebarOpen(false)} href="#" className="mt-auto bg-white text-[var(--primary-green500)] px-6 py-2 rounded-full text-center font-medium">
             Search

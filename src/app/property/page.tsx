@@ -6,7 +6,7 @@ const PropertiesPage = async () => {
   const properties = await getProperties()
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+    <div className="grid grid-cols-1 px-4 sm:px-12 lg:px-24 xl:px-40 pb-20 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
       {properties.map((property: any) => (
         <PropertyCard
           key={property.id}
@@ -15,7 +15,7 @@ const PropertiesPage = async () => {
             title: property.title || 'Untitled Property',
             type: property.type || 'House',
             location: property.location || 'Unknown Location',
-            price: property.price || 0,
+            
             image: property.image || '/fallback.jpg',
             bedrooms: property.bedrooms || 0,
             bathrooms: property.bathrooms || 0,

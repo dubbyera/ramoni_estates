@@ -33,7 +33,7 @@ const servicesData = [
 
 
   return (
-    <div id='services' className='relative flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 py-20 text-gray-700 '>
+    <div id='Services' className='relative flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 py-20 text-gray-700 '>
 
         
         <Title title='How can we help?' desc='From strategy to execution, we simplify real estate decisions with insight, precision, and trust.'/>

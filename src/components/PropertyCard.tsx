@@ -6,7 +6,7 @@ interface Property {
   title: string
   type: string
   location: string
-  price: number
+
   image: string
   bedrooms: number
   bathrooms: number
@@ -29,10 +29,10 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
         className="w-full h-56 object-cover"
       />
       <div className="p-4">
-        <h3 className="font-semibold text-lg">{property.title}</h3>
+        <h3 className="font-semibold text-lg pb-2">{property.title}</h3>
         <p className="text-gray-500 text-sm">{property.location}</p>
         <p className="text-green-600 font-semibold mt-2">
-          ₦{property.price.toLocaleString()}
+         
         </p>
         <div className="flex justify-between text-sm text-gray-600 mt-2">
           <span>{property.bedrooms} Beds</span>
